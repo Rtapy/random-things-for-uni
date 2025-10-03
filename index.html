@@ -308,8 +308,12 @@
             Saturday: 'S'
         };
 
-        let notes = {};
+        let notes = JSON.parse(localStorage.getItem('scheduleNotes')) || {};
         let editingNote = null;
+
+        function saveToLocalStorage() {
+            localStorage.setItem('scheduleNotes', JSON.stringify(notes));
+        }
 
         function renderSchedule() {
             const grid = document.getElementById('scheduleGrid');
@@ -389,12 +393,14 @@
                 delete notes[key];
             }
             
+            saveToLocalStorage();
             editingNote = null;
             renderSchedule();
         }
 
         function deleteNote(key) {
             delete notes[key];
+            saveToLocalStorage();
             renderSchedule();
         }
 
