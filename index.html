@@ -26,7 +26,7 @@
             border-radius: 20px;
             padding: 40px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            max-width: 1400px;
+            max-width: 1600px;
             width: 100%;
         }
 
@@ -40,7 +40,7 @@
 
         .schedule-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
         }
 
@@ -125,6 +125,120 @@
             background-clip: text;
         }
 
+        .room {
+            display: block;
+            font-size: 0.85em;
+            color: #888;
+            margin-top: 3px;
+            font-weight: 500;
+        }
+
+        .note-section {
+            margin-top: 10px;
+        }
+
+        .note-display {
+            background: #fffbeb;
+            border: 1px solid #fde68a;
+            border-radius: 8px;
+            padding: 8px;
+            margin-top: 8px;
+        }
+
+        .note-text {
+            font-size: 0.85em;
+            color: #374151;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .note-textarea {
+            width: 100%;
+            padding: 8px;
+            font-size: 0.85em;
+            border: 1px solid #c4b5fd;
+            border-radius: 8px;
+            resize: vertical;
+            font-family: inherit;
+            margin-top: 8px;
+        }
+
+        .note-textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .btn {
+            padding: 6px 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 0.8em;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-weight: 500;
+        }
+
+        .btn-add {
+            color: #667eea;
+            background: transparent;
+            padding: 4px 0;
+            margin-top: 8px;
+        }
+
+        .btn-add:hover {
+            color: #764ba2;
+        }
+
+        .btn-save {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-save:hover {
+            background: #5568d3;
+        }
+
+        .btn-cancel {
+            background: #9ca3af;
+            color: white;
+        }
+
+        .btn-cancel:hover {
+            background: #6b7280;
+        }
+
+        .btn-edit {
+            background: #ede9fe;
+            color: #667eea;
+            font-size: 0.75em;
+            padding: 4px 8px;
+        }
+
+        .btn-edit:hover {
+            background: #ddd6fe;
+        }
+
+        .btn-delete {
+            background: #fee2e2;
+            color: #dc2626;
+            font-size: 0.75em;
+            padding: 4px 8px;
+        }
+
+        .btn-delete:hover {
+            background: #fecaca;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
         .empty-day {
             color: #999;
             font-style: italic;
@@ -155,115 +269,141 @@
     <div class="container">
         <h1>📅 Weekly University Schedule</h1>
         
-        <div class="schedule-grid">
-            <!-- Sunday -->
-            <div class="day-column">
-                <div class="day-header">
-                    <div class="day-icon">S</div>
-                    <div class="day-name">Sunday</div>
-                </div>
-                <div class="classes">
-                    <div class="class-item">
-                        <span class="time">10:00 – 12:00</span>
-                        <span class="subject">CN Lab</span>
-                    </div>
-                    <div class="class-item">
-                        <span class="time">12:45 – 14:15</span>
-                        <span class="subject">PS</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Monday -->
-            <div class="day-column">
-                <div class="day-header">
-                    <div class="day-icon">M</div>
-                    <div class="day-name">Monday</div>
-                </div>
-                <div class="classes">
-                    <div class="class-item">
-                        <span class="time">08:00 – 09:15</span>
-                        <span class="subject">AI</span>
-                    </div>
-                    <div class="class-item">
-                        <span class="time">13:00 – 14:15</span>
-                        <span class="subject">CN</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tuesday -->
-            <div class="day-column">
-                <div class="day-header">
-                    <div class="day-icon">T</div>
-                    <div class="day-name">Tuesday</div>
-                </div>
-                <div class="classes">
-                    <div class="class-item">
-                        <span class="time">08:00 – 09:15</span>
-                        <span class="subject">AI</span>
-                    </div>
-                    <div class="class-item">
-                        <span class="time">13:00 – 14:15</span>
-                        <span class="subject">CN</span>
-                    </div>
-                    <div class="class-item">
-                        <span class="time">14:15 – 16:00</span>
-                        <span class="subject">RM</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Wednesday -->
-            <div class="day-column">
-                <div class="day-header">
-                    <div class="day-icon">W</div>
-                    <div class="day-name">Wednesday</div>
-                </div>
-                <div class="classes">
-                    <div class="class-item">
-                        <span class="time">07:30 – 10:00</span>
-                        <span class="subject">DSD</span>
-                    </div>
-                    <div class="class-item">
-                        <span class="time">13:00 – 15:00</span>
-                        <span class="subject">GD</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Thursday -->
-            <div class="day-column">
-                <div class="day-header">
-                    <div class="day-icon">T</div>
-                    <div class="day-name">Thursday</div>
-                </div>
-                <div class="classes">
-                    <div class="class-item">
-                        <span class="time">15:00 – 17:00</span>
-                        <span class="subject">IS</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Friday -->
-            <div class="day-column">
-                <div class="day-header">
-                    <div class="day-icon">F</div>
-                    <div class="day-name">Friday</div>
-                </div>
-                <div class="empty-day">No Classes</div>
-            </div>
-
-            <!-- Saturday -->
-            <div class="day-column">
-                <div class="day-header">
-                    <div class="day-icon">S</div>
-                    <div class="day-name">Saturday</div>
-                </div>
-                <div class="empty-day">No Classes</div>
-            </div>
-        </div>
+        <div class="schedule-grid" id="scheduleGrid"></div>
     </div>
+
+    <script>
+        const schedule = {
+            Sunday: [
+                { time: '10:00 – 12:00', subject: 'CN Lab', room: '620', key: 'sun-cnlab' },
+                { time: '12:45 – 14:15', subject: 'PS', room: '514', key: 'sun-ps' }
+            ],
+            Monday: [
+                { time: '08:00 – 09:15', subject: 'AI', room: '521', key: 'mon-ai' },
+                { time: '13:00 – 14:15', subject: 'CN', room: '511', key: 'mon-cn' }
+            ],
+            Tuesday: [
+                { time: '08:00 – 09:15', subject: 'AI', room: '521', key: 'tue-ai' },
+                { time: '13:00 – 14:15', subject: 'CN', room: '511', key: 'tue-cn' },
+                { time: '14:15 – 16:00', subject: 'RM', room: '511', key: 'tue-rm' }
+            ],
+            Wednesday: [
+                { time: '07:30 – 10:00', subject: 'DSD', room: '521', key: 'wed-dsd' },
+                { time: '13:00 – 15:00', subject: 'GD', room: '502', key: 'wed-gd' }
+            ],
+            Thursday: [
+                { time: '15:00 – 17:00', subject: 'IS', room: '31', key: 'thu-is' }
+            ],
+            Friday: [],
+            Saturday: []
+        };
+
+        const dayIcons = {
+            Sunday: 'S',
+            Monday: 'M',
+            Tuesday: 'T',
+            Wednesday: 'W',
+            Thursday: 'T',
+            Friday: 'F',
+            Saturday: 'S'
+        };
+
+        let notes = {};
+        let editingNote = null;
+
+        function renderSchedule() {
+            const grid = document.getElementById('scheduleGrid');
+            grid.innerHTML = '';
+
+            Object.entries(schedule).forEach(([day, classes]) => {
+                const dayColumn = document.createElement('div');
+                dayColumn.className = 'day-column';
+
+                dayColumn.innerHTML = `
+                    <div class="day-header">
+                        <div class="day-icon">${dayIcons[day]}</div>
+                        <div class="day-name">${day}</div>
+                    </div>
+                    <div class="classes">
+                        ${classes.length === 0 ? '<div class="empty-day">No Classes</div>' : 
+                        classes.map(cls => `
+                            <div class="class-item">
+                                <span class="time">${cls.time}</span>
+                                <span class="subject">${cls.subject}</span>
+                                <span class="room">Room ${cls.room}</span>
+                                <div class="note-section" id="note-${cls.key}">
+                                    ${renderNoteSection(cls.key)}
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+
+                grid.appendChild(dayColumn);
+            });
+        }
+
+        function renderNoteSection(key) {
+            if (editingNote === key) {
+                return `
+                    <textarea class="note-textarea" id="textarea-${key}" rows="3" placeholder="Add notes...">${notes[key] || ''}</textarea>
+                    <div class="btn-group">
+                        <button class="btn btn-save" onclick="saveNote('${key}')">💾 Save</button>
+                        <button class="btn btn-cancel" onclick="cancelEdit()">✕ Cancel</button>
+                    </div>
+                `;
+            } else if (notes[key]) {
+                return `
+                    <div class="note-display">
+                        <div class="note-text">${notes[key]}</div>
+                        <div class="btn-group">
+                            <button class="btn btn-edit" onclick="editNote('${key}')">✏️ Edit</button>
+                            <button class="btn btn-delete" onclick="deleteNote('${key}')">✕ Delete</button>
+                        </div>
+                    </div>
+                `;
+            } else {
+                return `<button class="btn btn-add" onclick="addNote('${key}')">+ Add note</button>`;
+            }
+        }
+
+        function addNote(key) {
+            editingNote = key;
+            renderSchedule();
+            document.getElementById(`textarea-${key}`)?.focus();
+        }
+
+        function editNote(key) {
+            editingNote = key;
+            renderSchedule();
+            document.getElementById(`textarea-${key}`)?.focus();
+        }
+
+        function saveNote(key) {
+            const textarea = document.getElementById(`textarea-${key}`);
+            const value = textarea.value.trim();
+            
+            if (value) {
+                notes[key] = value;
+            } else {
+                delete notes[key];
+            }
+            
+            editingNote = null;
+            renderSchedule();
+        }
+
+        function deleteNote(key) {
+            delete notes[key];
+            renderSchedule();
+        }
+
+        function cancelEdit() {
+            editingNote = null;
+            renderSchedule();
+        }
+
+        renderSchedule();
+    </script>
 </body>
 </html>
